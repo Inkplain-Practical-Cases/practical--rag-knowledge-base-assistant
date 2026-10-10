@@ -44,7 +44,14 @@
         "process_executors": 63,
         "missing_links": 0
       }
+    },
+    "content": {
+      "status": "in_progress",
+      "summary": "All gates pre-approved; creating and verifying 8 categories, 45 items with 16 source-backed What is lessons, 24 CRD-derived STEP items and 3 Conclusion items.",
+      "started_at": "2026-10-10T05:49:38.871Z",
+      "finished_at": null,
+      "updated_by": "api-key:for-chatgpt-test-2"
     }
   },
-  "updated_at": "2026-10-10T05:49:13.153Z"
+  "updated_at": "2026-10-10T05:49:38.871Z"
 }
