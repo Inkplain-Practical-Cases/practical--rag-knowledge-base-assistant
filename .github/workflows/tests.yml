@@ -1,0 +1,33 @@
+name: Verify all seven RAG learning branches
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  pytest:
+    name: pytest ${{ matrix.branch }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        branch:
+          - step-01-receive-knowledge-documents
+          - step-02-normalize-and-chunk-documents
+          - step-03-rank-evidence-with-lexical-search
+          - step-04-compose-grounded-answers
+          - step-05-verify-citations-and-abstention
+          - step-06-evaluate-and-monitor-retrieval
+          - main
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ matrix.branch }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+      - name: Run pytest
+        run: python -m pytest -q

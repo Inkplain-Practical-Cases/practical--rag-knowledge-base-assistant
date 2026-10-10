@@ -4,7 +4,7 @@
   "description": "Evaluate and monitor retrieval",
   "source": {
     "repo": "https://github.com/Inkplain-Practical-Cases/practical--rag-knowledge-base-assistant",
-    "revision": "step-06-evaluate-and-monitor-retrieval",
+    "revision": "main",
     "roots": {
       "backend": "app"
     },
@@ -14,11 +14,11 @@
     ]
   },
   "step": {
-    "no": 6,
+    "no": "final",
     "of": 6,
-    "title": "Evaluate and monitor retrieval",
-    "branch": "step-06-evaluate-and-monitor-retrieval",
-    "previous": "STEP-5.crd",
+    "title": "Complete RAG Knowledge Base Assistant",
+    "branch": "main",
+    "previous": "STEP-6.crd",
     "removed": []
   },
   "flows": [
@@ -40,7 +40,7 @@
       "source": {
         "file": "app/providers/documents.py",
         "symbol": "provider_documents",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           9
@@ -65,7 +65,7 @@
       "source": {
         "file": "app/features/knowledge/services.py",
         "symbol": "service_list_documents",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           4
@@ -102,7 +102,7 @@
       "source": {
         "file": "app/features/knowledge/handlers.py",
         "symbol": "handle_documents",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           4
@@ -139,7 +139,7 @@
       "source": {
         "file": "app/features/knowledge/door.py",
         "symbol": "documents",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           7
@@ -176,7 +176,7 @@
       "source": {
         "file": "app/features/knowledge/chunking.py",
         "symbol": "service_chunk_documents",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           9
@@ -201,7 +201,7 @@
       "source": {
         "file": "app/features/knowledge/handlers.py",
         "symbol": "handle_chunks",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           5
@@ -238,7 +238,7 @@
       "source": {
         "file": "app/features/knowledge/door.py",
         "symbol": "chunks",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           8
@@ -275,7 +275,7 @@
       "source": {
         "file": "app/features/knowledge/chunking.py",
         "symbol": "service_chunk_documents",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           9
@@ -300,7 +300,7 @@
       "source": {
         "file": "app/features/knowledge/handlers.py",
         "symbol": "handle_chunks",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           7
@@ -337,7 +337,7 @@
       "source": {
         "file": "app/features/knowledge/door.py",
         "symbol": "chunks",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           13
@@ -374,7 +374,7 @@
       "source": {
         "file": "app/features/knowledge/retrieval.py",
         "symbol": "service_rank_evidence",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           14
@@ -411,7 +411,7 @@
       "source": {
         "file": "app/features/knowledge/handlers.py",
         "symbol": "handle_search",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           7
@@ -448,7 +448,7 @@
       "source": {
         "file": "app/features/knowledge/door.py",
         "symbol": "search",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           13
@@ -485,7 +485,7 @@
       "source": {
         "file": "app/features/knowledge/answers.py",
         "symbol": "service_compose_answer",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           7
@@ -493,7 +493,7 @@
       },
       "owner": "knowledge",
       "status": "observed",
-      "step_change": "changed",
+      "step_change": "unchanged",
       "component_reason": "Ground answers in explicit citations.",
       "inputs": [],
       "validations": [],
@@ -544,7 +544,7 @@
       "source": {
         "file": "app/features/knowledge/handlers.py",
         "symbol": "handle_ask",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           9
@@ -581,7 +581,7 @@
       "source": {
         "file": "app/features/knowledge/door.py",
         "symbol": "ask",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           15
@@ -618,7 +618,7 @@
       "source": {
         "file": "app/features/knowledge/grounding.py",
         "symbol": "service_verify_citations",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           10
@@ -655,7 +655,7 @@
       "source": {
         "file": "app/core/observability.py",
         "symbol": "service_log_query_event",
-        "revision": "step-06-evaluate-and-monitor-retrieval",
+        "revision": "main",
         "lines": [
           1,
           6
@@ -663,7 +663,7 @@
       },
       "owner": "observability",
       "status": "observed",
-      "step_change": "added",
+      "step_change": "unchanged",
       "component_reason": "Verify operational behavior without disclosing queries.",
       "inputs": [],
       "validations": [],
