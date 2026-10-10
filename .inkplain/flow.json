@@ -1,0 +1,37 @@
+{
+  "practical_case": {
+    "id": "dzoJFJn5kFrnbSotS7Qe",
+    "slug": "rag-knowledge-base-assistant",
+    "name": "RAG Knowledge Base Assistant"
+  },
+  "current": "inkp",
+  "stages": {
+    "intro": {
+      "status": "done",
+      "started_at": "2026-10-10T05:35:20.052Z",
+      "finished_at": "2026-10-10T05:35:38.170Z",
+      "updated_by": "api-key:for-chatgpt-test-2",
+      "summary": "Seven detailed Introduction sections written and retrieved; four Starter skills linked, motivational nature/animal cover uploaded to Media Library and bound.",
+      "outputs": {
+        "intro_sections": 7,
+        "linked_skills": 4,
+        "cover_media_id": "enGsJekffdLIlGUyqGLL"
+      }
+    },
+    "repo": {
+      "status": "done",
+      "started_at": "2026-10-10T05:36:26.093Z",
+      "finished_at": "2026-10-10T05:43:55.223Z",
+      "updated_by": "api-key:for-chatgpt-test-2",
+      "summary": "Six cumulative working learning branches and FINAL.crd committed. GitHub Actions run 38028337854 successfully completed all seven branch/main pytest jobs with zero failures.",
+      "outputs": {
+        "repo_url": "https://github.com/Inkplain-Practical-Cases/practical--rag-knowledge-base-assistant",
+        "steps": 6,
+        "ci_status": "success",
+        "ci_jobs": 7,
+        "ci_run_id": 38028337854
+      }
+    }
+  },
+  "updated_at": "2026-10-10T05:43:55.223Z"
+}
