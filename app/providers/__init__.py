@@ -1,0 +1,1 @@
+# Replaceable offline document provider.
