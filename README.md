@@ -1,3 +1,3 @@
-# RAG Knowledge Base Assistant STEP-5
+# RAG Knowledge Base Assistant STEP-6
 
-Run `python -m pip install -r requirements.txt && python -m pytest -q`.
+Offline evidence-backed retrieval, verifiable exact citation, abstention and safe metadata-only logs. Run `python -m pip install -r requirements.txt && python -m pytest -q`.
