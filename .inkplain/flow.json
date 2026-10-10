@@ -4,7 +4,7 @@
     "slug": "rag-knowledge-base-assistant",
     "name": "RAG Knowledge Base Assistant"
   },
-  "current": "content",
+  "current": "done",
   "stages": {
     "intro": {
       "status": "done",
@@ -46,12 +46,23 @@
       }
     },
     "content": {
-      "status": "in_progress",
-      "summary": "All gates pre-approved; creating and verifying 8 categories, 45 items with 16 source-backed What is lessons, 24 CRD-derived STEP items and 3 Conclusion items.",
+      "status": "done",
+      "summary": "Stage 4 completed: 8 active categories / 45 public lessons (Overview 18 with 16 source-backed What-is; 6 STEP categories x 4 lessons; Conclusion 3). Four missing conclusion items created and read back; 45/45 category counts verified. Spot-checked What-is source content and STEP-1/STEP-6 CRD, matching inkp tabs, and branch-aligned source links. Earlier repo CI 7/7 and INKP zero missing links.",
       "started_at": "2026-10-10T05:49:38.871Z",
-      "finished_at": null,
-      "updated_by": "api-key:for-chatgpt-test-2"
+      "finished_at": "2026-10-10T06:23:46.039Z",
+      "updated_by": "api-key:for-chatgpt-test-2",
+      "outputs": {
+        "categories": 8,
+        "items": 45,
+        "overview_items": 18,
+        "what_is_items": 16,
+        "step_items": 24,
+        "conclusion_items": 3,
+        "portal_url": "/practical-case/rag-knowledge-base-assistant",
+        "readback_verified": true,
+        "validation_scope": "all item counts; four new items; representative STEP and What-is bodies"
+      }
     }
   },
-  "updated_at": "2026-10-10T05:49:38.871Z"
+  "updated_at": "2026-10-10T06:23:46.039Z"
 }
