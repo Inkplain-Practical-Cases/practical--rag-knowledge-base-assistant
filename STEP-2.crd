@@ -1,10 +1,10 @@
 {
   "crd_version": 1,
   "name": "RAG Knowledge Base Assistant",
-  "description": "Receive knowledge documents",
+  "description": "Normalize and chunk documents",
   "source": {
     "repo": "https://github.com/Inkplain-Practical-Cases/practical--rag-knowledge-base-assistant",
-    "revision": "step-01-receive-knowledge-documents",
+    "revision": "step-02-normalize-and-chunk-documents",
     "roots": {
       "backend": "app"
     },
@@ -14,11 +14,11 @@
     ]
   },
   "step": {
-    "no": 1,
+    "no": 2,
     "of": 6,
-    "title": "Receive knowledge documents",
-    "branch": "step-01-receive-knowledge-documents",
-    "previous": null,
+    "title": "Normalize and chunk documents",
+    "branch": "step-02-normalize-and-chunk-documents",
+    "previous": "STEP-1.crd",
     "removed": []
   },
   "flows": [
@@ -40,7 +40,7 @@
       "source": {
         "file": "app/providers/documents.py",
         "symbol": "provider_documents",
-        "revision": "step-01-receive-knowledge-documents",
+        "revision": "step-02-normalize-and-chunk-documents",
         "lines": [
           1,
           9
@@ -48,7 +48,7 @@
       },
       "owner": "knowledge",
       "status": "observed",
-      "step_change": "added",
+      "step_change": "unchanged",
       "component_reason": "Separate HTTP, business rules and corpus provider for testability.",
       "inputs": [],
       "validations": [],
@@ -65,7 +65,7 @@
       "source": {
         "file": "app/features/knowledge/services.py",
         "symbol": "service_list_documents",
-        "revision": "step-01-receive-knowledge-documents",
+        "revision": "step-02-normalize-and-chunk-documents",
         "lines": [
           1,
           4
@@ -73,7 +73,7 @@
       },
       "owner": "knowledge",
       "status": "observed",
-      "step_change": "added",
+      "step_change": "unchanged",
       "component_reason": "Separate HTTP, business rules and corpus provider for testability.",
       "inputs": [],
       "validations": [],
@@ -102,7 +102,7 @@
       "source": {
         "file": "app/features/knowledge/handlers.py",
         "symbol": "handle_documents",
-        "revision": "step-01-receive-knowledge-documents",
+        "revision": "step-02-normalize-and-chunk-documents",
         "lines": [
           1,
           4
@@ -110,7 +110,7 @@
       },
       "owner": "knowledge",
       "status": "observed",
-      "step_change": "added",
+      "step_change": "changed",
       "component_reason": "Separate HTTP, business rules and corpus provider for testability.",
       "inputs": [],
       "validations": [],
@@ -139,7 +139,7 @@
       "source": {
         "file": "app/features/knowledge/door.py",
         "symbol": "documents",
-        "revision": "step-01-receive-knowledge-documents",
+        "revision": "step-02-normalize-and-chunk-documents",
         "lines": [
           1,
           7
@@ -147,7 +147,7 @@
       },
       "owner": "knowledge",
       "status": "observed",
-      "step_change": "added",
+      "step_change": "changed",
       "component_reason": "Separate HTTP, business rules and corpus provider for testability.",
       "inputs": [],
       "validations": [],
@@ -160,6 +160,105 @@
           "show": true,
           "calls": {
             "component": "be.handle_documents",
+            "type": "call",
+            "label": "calls"
+          }
+        }
+      ]
+    },
+    {
+      "id": "be.service_chunk_documents",
+      "name": "service_chunk_documents",
+      "kind": "function",
+      "side": "backend",
+      "layer": "service",
+      "description": "service_chunk_documents implements the service contract for offline evidence retrieval.",
+      "source": {
+        "file": "app/features/knowledge/chunking.py",
+        "symbol": "service_chunk_documents",
+        "revision": "step-02-normalize-and-chunk-documents",
+        "lines": [
+          1,
+          9
+        ]
+      },
+      "owner": "knowledge",
+      "status": "observed",
+      "step_change": "added",
+      "component_reason": "Separate HTTP, business rules and corpus provider for testability.",
+      "inputs": [],
+      "validations": [],
+      "outputs": [],
+      "operations": []
+    },
+    {
+      "id": "be.handle_chunks",
+      "name": "handle_chunks",
+      "kind": "function",
+      "side": "backend",
+      "layer": "handler",
+      "description": "handle_chunks implements the handler contract for offline evidence retrieval.",
+      "source": {
+        "file": "app/features/knowledge/handlers.py",
+        "symbol": "handle_chunks",
+        "revision": "step-02-normalize-and-chunk-documents",
+        "lines": [
+          1,
+          5
+        ]
+      },
+      "owner": "knowledge",
+      "status": "observed",
+      "step_change": "added",
+      "component_reason": "Separate HTTP, business rules and corpus provider for testability.",
+      "inputs": [],
+      "validations": [],
+      "outputs": [],
+      "operations": [
+        {
+          "id": "call-0",
+          "title": "Call service_chunk_documents",
+          "description": "Delegate",
+          "show": true,
+          "calls": {
+            "component": "be.service_chunk_documents",
+            "type": "call",
+            "label": "calls"
+          }
+        }
+      ]
+    },
+    {
+      "id": "be.chunks",
+      "name": "chunks",
+      "kind": "function",
+      "side": "backend",
+      "layer": "door",
+      "description": "chunks implements the door contract for offline evidence retrieval.",
+      "source": {
+        "file": "app/features/knowledge/door.py",
+        "symbol": "chunks",
+        "revision": "step-02-normalize-and-chunk-documents",
+        "lines": [
+          1,
+          8
+        ]
+      },
+      "owner": "knowledge",
+      "status": "observed",
+      "step_change": "added",
+      "component_reason": "Separate HTTP, business rules and corpus provider for testability.",
+      "inputs": [],
+      "validations": [],
+      "outputs": [],
+      "operations": [
+        {
+          "id": "call-0",
+          "title": "Call handle_chunks",
+          "description": "Delegate",
+          "show": true,
+          "calls": {
+            "component": "be.handle_chunks",
             "type": "call",
             "label": "calls"
           }

@@ -1,3 +1,3 @@
-# RAG Knowledge Base Assistant — STEP-1
+# RAG Knowledge Base Assistant — STEP-2
 
-Receive knowledge documents. Offline, deterministic evidence processing, no remote model. Run `python -m pip install -r requirements.txt && python -m pytest -q`.
+Normalize and chunk documents. Offline, deterministic evidence processing, no remote model. Run `python -m pip install -r requirements.txt && python -m pytest -q`.
