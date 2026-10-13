@@ -47,7 +47,7 @@
     },
     "content": {
       "status": "done",
-      "summary": "Stage 4 completed: 8 active categories / 45 public lessons (Overview 18 with 16 source-backed What-is; 6 STEP categories x 4 lessons; Conclusion 3). Four missing conclusion items created and read back; 45/45 category counts verified. Spot-checked What-is source content and STEP-1/STEP-6 CRD, matching inkp tabs, and branch-aligned source links. Earlier repo CI 7/7 and INKP zero missing links.",
+      "summary": "Final source audit: provider_documents() returns copied Python fixture dictionaries and retrieval reads an in-code synthetic corpus. There is no durable document store, vector database, SQL collection or foreign key. No .erd/Database (Entity) Relations lesson applies.",
       "started_at": "2026-10-10T05:49:38.871Z",
       "finished_at": "2026-10-10T06:23:46.039Z",
       "updated_by": "api-key:for-chatgpt-test-2",
@@ -60,9 +60,13 @@
         "conclusion_items": 3,
         "portal_url": "/practical-case/rag-knowledge-base-assistant",
         "readback_verified": true,
-        "validation_scope": "all item counts; four new items; representative STEP and What-is bodies"
+        "validation_scope": "all item counts; four new items; representative STEP and What-is bodies",
+        "erd_audit_complete": true,
+        "erd_applicable_steps": [],
+        "erd_not_applicable": true,
+        "erd_lessons_created": 0
       }
     }
   },
-  "updated_at": "2026-10-10T06:23:46.039Z"
+  "updated_at": "2026-10-13T13:45:49.824Z"
 }
